@@ -27,7 +27,7 @@ func Fail() string {
 	return developer.WhenDeveloperFailsProblem(errorMessage())
 }
 
-func WhatIsYourName(name string) (string, error) {
+func YourName(name string) (string, error) {
 	if name == "" {
 		return "", errors.New("state your name")
 	}
