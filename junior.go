@@ -1,14 +1,8 @@
 package junior
 
 import (
-	"fmt"
-
 	"github.com/BilgeKaanGencdogan/developer"
 )
-
-func WhoAmI() {
-	fmt.Println("I am a junior developer")
-}
 
 func evreka() string {
 	return "evreka!!"
