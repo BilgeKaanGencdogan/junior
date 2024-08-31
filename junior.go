@@ -1,6 +1,7 @@
 package junior
 
 import (
+	"errors"
 	"fmt"
 
 	"github.com/BilgeKaanGencdogan/developer"
@@ -14,7 +15,7 @@ func evreka() string {
 	return "evreka!!"
 }
 
-func error() string {
+func errorMessage() string {
 	return "Oh No!!"
 }
 
@@ -23,5 +24,13 @@ func Success() string {
 }
 
 func Fail() string {
-	return developer.WhenDeveloperFailsProblem(error())
+	return developer.WhenDeveloperFailsProblem(errorMessage())
+}
+
+func whatIsYourName(name string) (string, error) {
+	if name == "" {
+		return "", errors.New("State your name")
+	}
+	message := fmt.Sprintf("Hi, %v. Welcome!", name)
+	return message, nil
 }
