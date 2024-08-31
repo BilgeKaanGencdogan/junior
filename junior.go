@@ -18,10 +18,10 @@ func error() string {
 	return "Oh No!!"
 }
 
-func success() string {
+func Success() string {
 	return developer.WhenDeveloperSolvesProblem(evreka())
 }
 
-func fail() string {
+func Fail() string {
 	return developer.WhenDeveloperFailsProblem(error())
 }
