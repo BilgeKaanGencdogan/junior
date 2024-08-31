@@ -27,9 +27,9 @@ func Fail() string {
 	return developer.WhenDeveloperFailsProblem(errorMessage())
 }
 
-func whatIsYourName(name string) (string, error) {
+func WhatIsYourName(name string) (string, error) {
 	if name == "" {
-		return "", errors.New("State your name")
+		return "", errors.New("state your name")
 	}
 	message := fmt.Sprintf("Hi, %v. Welcome!", name)
 	return message, nil
