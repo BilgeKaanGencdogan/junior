@@ -36,6 +36,19 @@ func YourNameWelcome(name string) (string, error) {
 	return message, nil
 }
 
+func MoreThanOneWelcome(names []string) (map[string]string, error) {
+	messages := make(map[string]string)
+
+	for _, name := range names {
+		message, err := YourNameWelcome(name)
+		if err != nil {
+			return nil, err
+		}
+		messages[name] = message
+	}
+	return messages, nil
+}
+
 func RandomSentence() string {
 	sentences := []string{
 		"I am a junior developer, Hello %v",
